@@ -1,6 +1,6 @@
 # 自定义强制直连规则（behavior: classical）
 payload:
-  - IP-CIDR,8.134.211.33/32,no-resolve
+  - IP-CIDR,8.134.211.33/32
   - DOMAIN-KEYWORD,ai.ayue.cc
   - DOMAIN-KEYWORD,aihub.dog
   - DOMAIN-KEYWORD,api.xgs147.com
