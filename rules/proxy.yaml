@@ -1,13 +1,3 @@
-# 自定义强制代理规则
-# 在客户端中使用 behavior: classical、format: yaml 引用。
-# 这里只维护额外的代理例外，不需要罗列所有国外网站。
-# 不在此处绑定国家、节点或代理组；每台设备在 RULE-SET 中选择自己的出口。
-# 尚未指定实际域名，因此保留空列表，不启用任何示例规则。
-payload: []
-
-# 添加规则时，将上面的 payload: [] 改成下面这样的列表：
-# payload:
-#   - DOMAIN-SUFFIX,example.org
-#   - DOMAIN,api.example.com
-#   - IP-CIDR,203.0.113.0/24,no-resolve
-# 上述域名和网段仅用于演示，请按实际需求替换。
+# 自定义强制代理规则（behavior: classical）
+payload:
+  - DOMAIN-KEYWORD,shopify
