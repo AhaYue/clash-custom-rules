@@ -1,0 +1,13 @@
+# 自定义强制直连规则
+# 在客户端中使用 behavior: classical、format: yaml 引用。
+# 这里只维护额外的直连例外，不需要罗列所有国内网站。
+# 规则中不写 DIRECT 或代理组名称；出口由客户端的 RULE-SET 引用决定。
+# 尚未指定实际域名，因此保留空列表，不启用任何示例规则。
+payload: []
+
+# 添加规则时，将上面的 payload: [] 改成下面这样的列表：
+# payload:
+#   - DOMAIN-SUFFIX,example.cn
+#   - DOMAIN,home.example.com
+#   - IP-CIDR,192.168.1.0/24,no-resolve
+# 上述域名和网段仅用于演示，请按实际需求替换。
