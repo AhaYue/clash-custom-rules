@@ -1,4 +1,4 @@
-# 自定义强制直连规则（behavior: classical）
+# 自定义强制直连规则（behavior: classical） ayue-direct
 payload:
   - IP-CIDR,8.134.211.33/32
   - IP-CIDR,120.26.22.103/32
