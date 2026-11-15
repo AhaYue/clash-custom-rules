@@ -71,6 +71,16 @@ proxy-groups:
       - 🎯 全球直连
       - __PROXY_PROVIDERS__
       - __PROXY_NODES__
+  - name: 🤖 Claude
+    type: select
+    include-all: true
+    include-all-proxies: true
+    include-all-providers: true
+    proxies:
+      - 🚀 手动选择
+      - ♻️ 自动选择
+      - __PROXY_PROVIDERS__
+      - __PROXY_NODES__
   - name: 📢 谷歌FCM
     type: select
     include-all: true
@@ -187,6 +197,7 @@ proxy-groups:
       - 🐟 漏网之鱼
 rules:
   - RULE-SET,ayue-direct,🎯 全球直连
+  - RULE-SET,ayue-claude,🤖 Claude
   - RULE-SET,ayue-proxy,🚀 手动选择
   - GEOSITE,private,🎯 全球直连
   - GEOIP,private,🎯 全球直连,no-resolve
@@ -264,4 +275,11 @@ rule-providers:
     format: yaml
     url: https://testingcf.jsdelivr.net/gh/AhaYue/clash-custom-rules@main/rules/proxy.yaml
     path: ./providers/custom-proxy.yaml
+    interval: 28800
+  ayue-claude:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://testingcf.jsdelivr.net/gh/AhaYue/clash-custom-rules@main/rules/claude.yaml
+    path: ./providers/custom-claude.yaml
     interval: 28800
